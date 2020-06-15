@@ -11,9 +11,4 @@ def get_wikipedia_text(search_string: str):
         page_name = e.options[0]
     page = wikipedia.page(page_name)
     page_text = page.content
-    return page_text
-
-#This could be user input
-search_string = "New York"
-page_text = get_wikipedia_text(search_string)
-print(len(page_text))
+    return page_text, page_name
